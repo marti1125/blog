@@ -54,7 +54,11 @@ Blog::Application.routes.draw do
 
   get "posts/new"
 
+  get "posts" => "posts#index"
+
   post "posts" => "posts#create"
+
+  get "posts/:id" => "posts#show"
 
   # See how all your routes lay out with "rake routes"
 
