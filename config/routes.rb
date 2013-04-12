@@ -52,7 +52,9 @@ Blog::Application.routes.draw do
   # just remember to delete public/index.html.
   #root :to => 'welcome#index'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   root :to => 'welcome#index'
 
